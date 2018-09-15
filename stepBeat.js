@@ -93,7 +93,10 @@ function draw(){
   T+=1;//for timing
   background(200);
   drawGrid();
-  drawHistory();
+  for (this.i=0;this.i<100;this.i++){ //higher resolution?
+    drawHistory();
+  }
+
 }
 
 function drawGrid(){
