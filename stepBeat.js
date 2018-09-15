@@ -114,8 +114,8 @@ function drawHistory(){
     line(width/100*this.i,history[this.i],width/100*(this.i+1),history[this.i+1])
     history[this.i]=history[this.i+1];
   }
-  line(99*width/100,history[99],width,sensor.y*50+getDocHeight()*.5);
-  history[99]=sensor.y*50+getDocHeight()*.5;
+  line(99*width/100,history[99],width,sensor.y*5+getDocHeight()*.5);
+  history[99]=sensor.y*5+getDocHeight()*.5;
 }
 
 function getDocHeight() {
