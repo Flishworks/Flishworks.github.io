@@ -77,9 +77,9 @@ sensor.onreading = () => {
 }
 
 function setup(){
-  var canvas = createCanvas(getDocWidth()*.5, getDocHeight()*.5);
+  var canvas = createCanvas(getDocWidth(), getDocHeight());
   canvas.parent("p5canvas");  //puts canvas in the p5canvas div
-  canvas.position(getDocWidth()*.25,250);
+  canvas.position(0,0);
 
   //initialize history array
   for (this.i=0;this.i<100;this.i++){
@@ -111,11 +111,11 @@ function drawHistory(){
   stroke(200,100,0);
   strokeWeight(2);
   for (this.i=0;this.i<99;this.i++){
-    line(width/200*this.i,history[this.i],width/200*(this.i+1),history[this.i+1])
+    line(width/100*this.i,history[this.i],width/100*(this.i+1),history[this.i+1])
     history[this.i]=history[this.i+1];
   }
-  line(99*width/200,history[99],width/2,sensor.y*200+getDocHeight()*.25);
-  history[99]=sensor.y*200+getDocHeight()*.25;
+  line(99*width/100,history[99],width,sensor.y*50+getDocHeight()*.5);
+  history[99]=sensor.y*50+getDocHeight()*.5;
 }
 
 function getDocHeight() {
