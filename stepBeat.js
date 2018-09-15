@@ -1,6 +1,6 @@
 var T=0;
 var history =[]
-var scalingFactor=10;
+var scalingFactor=50;
 for (this.i=0;this.i<100;this.i++){ //fill array with zero
   history[this.i]=0;
 }
