@@ -117,3 +117,21 @@ function drawHistory(){
   line(99*width/200,history[99],width/2,sensor.y*200+getDocHeight()*.25);
   history[99]=sensor.y*200+getDocHeight()*.25;
 }
+
+function getDocHeight() {
+    var D = document;
+    return Math.max(
+        D.body.scrollHeight, D.documentElement.scrollHeight,
+        D.body.offsetHeight, D.documentElement.offsetHeight,
+        D.body.clientHeight, D.documentElement.clientHeight
+    );
+}
+
+function getDocWidth() {
+    var D = document;
+    return Math.max(
+        D.body.scrollWidth, D.documentElement.scrollWidth,
+        D.body.offsetWidth, D.documentElement.offsetWidth,
+        D.body.clientWidth, D.documentElement.clientWidth
+    );
+}
